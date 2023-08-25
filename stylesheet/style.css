@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+#title{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 1.5vh;
+}
+
+#semaphore-display{
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.5vh;
+    border-radius: 0.3vh;
+}
