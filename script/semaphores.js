@@ -41,15 +41,15 @@ const semaphores = {
         right: 270
     },
     k: {
-        left: 270,
+        left: -90,
         right: 135
     },
     l: {
-        left: 315,
+        left: -45,
         right: 135
     },
     m: {
-        left: 360,
+        left: 0 ,
         right: 135
     },
     n: {
@@ -57,19 +57,19 @@ const semaphores = {
         right: 135
     },
     o: {
-        left: 225,
+        left: -135,
         right: 180
     },
     p: {
-        left: 270,
+        left: -90,
         right: 180
     },
     q: {
-        left: 315,
+        left: -45,
         right: 180
     },
     r: {
-        left: 360,
+        left: 0,
         right: 180
     },
     s: {
@@ -77,11 +77,11 @@ const semaphores = {
         right: 180
     },
     t: {
-        left: 270,
+        left: -90,
         right: 225
     },
     u: {
-        left: 315,
+        left: -45,
         right: 225
     },
     v: {
