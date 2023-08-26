@@ -22,3 +22,91 @@ body{
     margin-top: 2.5vh;
     border-radius: 0.3vh;
 }
+
+#container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#davy{
+    position: relative;
+}
+
+#head{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    /* background-color: bisque; */
+}
+
+#body{
+    width: 150px;
+    height: 250px;
+    background-color: transparent;
+    border-radius: 5px;
+    background-image: url('../media/sailor-dress.png');
+    background-position: top;
+    background-size: cover;
+}
+
+#left-hand, #right-hand{
+    position: absolute;
+    width: 200px;
+    z-index: -1;
+    height: 30px;
+    /* background-color: blue; */
+    background-image: url('../media/left-hand.png'), linear-gradient(to left, rgb(226, 198, 202), pink);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    transition: rotate 0.3s;
+
+}
+
+#right-hand{
+    transform-origin: center left;
+    top: 130px;
+    left: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    rotate: 90deg;
+}
+
+#left-hand{
+    transform-origin: center left;
+    top: 130px;
+    left: 125px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    rotate: 90deg;
+}
+
+#left-flag, #right-flag{
+    width: 50px;
+    height: 75px;
+    background-color: indigo;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(300deg, rgba(254,18,18,1) 49%, rgba(254,255,0,1) 49%);
+}
+
+#left-flag{
+    top: 0;
+}
+
+#left-flag{
+    background-image: linear-gradient(237deg, rgba(254,18,18,1) 49%, rgba(254,255,0,1) 49%);
+}
+
+#legs{
+    flex-basis: 100%;
+    height: 150px;
+    background-color: navy;
+}
+
+.flip-left{
+    transform: scale(-1);
+}

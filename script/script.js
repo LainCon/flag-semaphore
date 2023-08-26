@@ -1,15 +1,19 @@
-function drawDavy() {
-    let canvas = document.getElementById('semaphore-display');
-    if (canvas.getContext) {
-        const ctx = canvas.getContext("2d");
-        ctx.fillStyle = "rgb(200, 0, 0)";
-        ctx.fillRect(200, 150, 100, 200);
+let leftHand = document.getElementById('left-hand');
+let rightHand = document.getElementById('right-hand');
 
-        ctx.beginPath();
-        ctx.arc(250, 100, 50, 0, 360, false);
-        ctx.fillStyle = "yellow";
-        ctx.fill();
+window.addEventListener('keydown', renderSemaphore);
+
+function renderSemaphore(e) {
+    if (semaphores[e.key.toLowerCase()]) {
+        /*Testing something Temporary Conditional Below*/
+        if(e.key == 'h'){
+            document.getElementById('left-flag').setAttribute('class', 'flip-left')
+        }
+        else{
+            document.getElementById('left-flag').setAttribute('class', '');
+        }
+        
+        leftHand.style.rotate = semaphores[e.key.toLowerCase()].left + 'deg';
+        rightHand.style.rotate = semaphores[e.key.toLowerCase()].right + 'deg';
     }
 }
-
-window.addEventListener('load', drawDavy);
