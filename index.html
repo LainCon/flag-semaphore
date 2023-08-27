@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flag Semaphore</title>
     <link href="./stylesheet/style.css" rel="stylesheet">
+    <link href="./media/interdasting.jpg" rel="icon">
 </head>
 <body>
-    <h1 id="title">Flag Semaphore</h1>
+    <header>
+        <h1 id="title">Flag Semaphore</h1>
+        <a href="https://github.com/LainCon/flag-semaphore" title="flag-semaphore-github">
+            <img src="./media/interdasting.jpg" id="logo">
+            <!-- <img src="./media/github-logo.png"> -->
+        </a>
+    </header>
     <div id="container">
         <div id="davy">
             <div id="left-hand">
@@ -18,15 +25,18 @@
             <div id="right-hand">
                 <div id="right-flag"></div>
             </div>
-            <!-- <div id="legs"> -->
 
-            </div>
         </div>
     </div>
-    <!-- <canvas width="500px" height="500px" id="semaphore-display">
-        <p>Canvas not Supported! Pleb!</p>
-    </canvas> -->
+    <p id="display-text"></p>
+    <div id="input-text">
+        <input id="input-message" type="text" placeholder="message">
+        <button type="button" id="signal-btn">Signal</button>
+        <button type="button" id="reset-btn">Reset</button>
+    </div>
+
     <script src="./script/semaphores.js"></script>
-    <script src="./script/script.js"></script>
+    <script src="./script/messageHandler.js"></script>
+    <script src="./script/signalHandler.js"></script>
 </body>
 </html>
