@@ -1,21 +1,48 @@
-*{
+* {
     box-sizing: border-box;
     outline: none;
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
-body{
-    background-color: aliceblue;
+body {
+    background-color: rgb(243, 243, 229);
 }
 
-#title{
+header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 70px;
+    background-color: bisque;
+    box-shadow: 2px 2px coral;
+}
+
+#title {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-    margin: 1.5vh;
+    /* margin: 1.5vh; */
+    color: tomato;
 }
 
-#semaphore-display{
+header a{
+    display: flex;
+    align-items: center;
+    margin: 0.3vh;
+}
+
+#logo{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+
+#semaphore-display {
     border: 1px solid black;
     display: block;
     margin: 0 auto;
@@ -23,17 +50,17 @@ body{
     border-radius: 0.3vh;
 }
 
-#container{
+#container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#davy{
+#davy {
     position: relative;
 }
 
-#head{
+#head {
     width: 100px;
     height: 100px;
     margin: 0 auto;
@@ -41,7 +68,7 @@ body{
     /* background-color: bisque; */
 }
 
-#body{
+#body {
     width: 150px;
     height: 250px;
     background-color: transparent;
@@ -51,13 +78,14 @@ body{
     background-size: cover;
 }
 
-#left-hand, #right-hand{
+#left-hand,
+#right-hand {
     position: absolute;
     width: 200px;
     z-index: -1;
     height: 30px;
     /* background-color: blue; */
-    background-image: url('../media/left-hand.png'), linear-gradient(to left, rgb(226, 198, 202), pink);
+    background-image: url('../media/left-hand.png'), linear-gradient(to left, rgb(226, 219, 198), rgb(255, 228, 192));
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top left;
@@ -66,7 +94,7 @@ body{
 
 }
 
-#right-hand{
+#right-hand {
     transform-origin: center left;
     top: 130px;
     left: 20px;
@@ -75,7 +103,7 @@ body{
     rotate: 90deg;
 }
 
-#left-hand{
+#left-hand {
     transform-origin: center left;
     top: 130px;
     left: 125px;
@@ -84,31 +112,96 @@ body{
     rotate: 90deg;
 }
 
-#left-flag, #right-flag{
+#left-flag,
+#right-flag {
     width: 50px;
     height: 75px;
     background-color: indigo;
     position: absolute;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(300deg, rgba(254,18,18,1) 49%, rgba(254,255,0,1) 49%);
+    background-image: linear-gradient(300deg, rgba(254, 18, 18, 1) 49%, rgba(254, 255, 0, 1) 49%);
 }
 
-.norm-flag{
+.norm-flag {
     top: 0;
 }
 
-#left-flag{
+#left-flag {
     /* top: 0; */
-    background-image: linear-gradient(239deg, rgba(254,18,18,1) 49%, rgba(254,255,0,1) 49%);
+    background-image: linear-gradient(239deg, rgba(254, 18, 18, 1) 49%, rgba(254, 255, 0, 1) 49%);
 }
 
-#legs{
+#legs {
     flex-basis: 100%;
     height: 150px;
     background-color: navy;
 }
 
-.flip-flag{
+.flip-flag {
     transform: scale(-1);
+}
+
+#display-text {
+    margin: 0 auto;
+    margin-top: 3vh;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    background-color: lightpink;
+    font-family: 'Courier New', Courier, monospace;
+    /* box-shadow: inset -2px -2px crimson; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-text{
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 2.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-text input{
+    flex-basis: 100%;
+    border-radius: 5px;
+    background-color: lightblue;
+    box-shadow: inset -2px -2px darkcyan;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    padding: 0.3rem;
+    margin-bottom: 1vh;
+    color: darkcyan;
+}
+
+#input-text button{
+    background-color: lightsalmon;
+    box-shadow: inset -2px -2px darkorange;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    padding: 0.3rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+#input-text button:active {
+    box-shadow: inset 2px 2px darkorange;
+}
+
+#input-text #reset-btn {
+    margin-left: 15px;
+    color: white;
+    background-color: grey;
+    box-shadow: inset -2px -2px black;
+}
+
+#input-text #reset-btn:active {
+    box-shadow: inset 2px 2px black;
 }
