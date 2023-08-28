@@ -7,7 +7,7 @@ let rightFlag = document.getElementById('right-flag');
 
 function renderSemaphore(key) {
     key = key.toLowerCase();
-    if (semaphores[key]) {
+    if (key in semaphores) {
 
         if (key == 'h' || key == 'i' || key == 'o') {
             leftFlag.setAttribute('class', 'flip-flag');
